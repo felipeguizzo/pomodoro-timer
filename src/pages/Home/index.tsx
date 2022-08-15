@@ -1,5 +1,5 @@
 import { HandPalm, Play } from "phosphor-react";
-import { createContext, useContext, useState } from "react";
+import { useContext } from "react";
 import { HomeContainer, StartCountdownButton, StopCountdownButton } from "./styles";
 import { NewCycleForm } from "./NewCycleForm";
 import { Countdown } from "./Countdown";
@@ -39,7 +39,7 @@ export function Home() {
 
     return (
         <HomeContainer>
-            <form onSubmit={handleSubmit(createNewCycle)}>
+            <form onSubmit={handleSubmit(handleCreateNewCycle)}>
                 <FormProvider {...newCycleForm}>
                     <NewCycleForm />
                 </FormProvider>
